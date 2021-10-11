@@ -12,3 +12,8 @@ try:
 except MemoryError:
     print("test5 MemoryError")
 print("test6", damerau_levenshtein_distance("NICHOLASŸ", "NICHOLAS"))
+for i in range(10000):
+    try:
+        print(f"test{i}", damerau_levenshtein_distance("š" * i, "ř" * i))
+    except MemoryError:
+        print(f"test{i} MemoryError")
